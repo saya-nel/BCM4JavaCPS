@@ -1,0 +1,19 @@
+<deployment>
+   <hosts>
+    <host name="localhost"
+          dir="/home/pablo/Dropbox/Cours/m1/s2/cps/BCM4JavaCPS"/>
+  </hosts>
+  <cyclicBarrier   hostname="localhost" port="55253"/>
+  <globalRegistry  hostname="localhost" port="55252"/>
+  <rmiRegistryPort no="55999"/>
+  <jvms2hostnames>
+    <jvm2hostname jvmuri="jvm1"
+        rmiRegistryCreator="true"
+        hostname="localhost"
+        mainclass="deployment.DistributedCVM"/>
+    <jvm2hostname jvmuri="jvm2"
+        rmiRegistryCreator="false"
+        	hostname="localhost"
+        mainclass="deployment.DistributedCVM"/>
+   </jvms2hostnames>
+</deployment>
